@@ -26,3 +26,40 @@ function dBScale(intensity){
 function smash(words){
   return words.join(' ');
 }
+
+//Problem: Calculate BMI
+function bmi(weight, height) {
+  var rslt = weight/Math.pow(height,2);
+  if (rslt <= 18.5) { return "Underweight"; } else
+  if (rslt > 18.5 && rslt <= 25) { return "Normal"; } else
+  if (rslt > 25 && rslt <= 30) { return "Overweight"; } else
+  return "Obese";
+}
+
+//Problem: Opposite Number
+function opposite(number) {
+  return number *= -1;
+}
+
+//Problem: Filter out the geese
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(function(bird){
+    return !(geese.includes(bird));
+  });
+};
+//Probelm: Filter out the geese v2
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(a => geese.indexOf(a) < 0);
+};
+
+//Beginner Series #1 School Paperwork
+function paperwork(n, m) {
+    return n < 0 || m < 0 ? 0 : n * m;
+}
+
+//Beginner Series #2 Clock
+function past(h, m, s){
+  return (h*3600000)+(m*60000)+(s*1000);
+}
