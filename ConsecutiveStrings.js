@@ -6,7 +6,7 @@ function longestConsec(strarr, k) {
   {
     let tmp = strarr.slice(i, i+k).join('');
     if (rslt.length < tmp.length)
-      rslt = temp;
+      rslt = tmp;
   }
   return rslt;
 }
