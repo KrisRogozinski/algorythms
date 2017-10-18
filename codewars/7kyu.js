@@ -19,3 +19,8 @@ function nbYear(p0, percent, aug, p, years = 0) {
   p0 += (p0*(percent/100)) + (aug);
   return nbYear(p0, percent, aug, p, years);
 }
+
+//Problem: Printer Errors
+function printerError(s) {
+  return s.split('').filter(a => 'abcdefghijklm'.split('').indexOf(a) < 0).length+'/'+s.length;
+}
