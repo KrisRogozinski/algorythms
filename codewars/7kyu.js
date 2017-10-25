@@ -54,3 +54,8 @@ function getMiddle(s){
   else
     return s[Math.floor(i)];
 }
+
+//Reversed Strings
+function solution(str){
+  return str.split('').reverse().join('');
+}
