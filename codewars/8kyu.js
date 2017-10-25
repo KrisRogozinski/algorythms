@@ -63,3 +63,17 @@ function paperwork(n, m) {
 function past(h, m, s){
   return (h*3600000)+(m*60000)+(s*1000);
 }
+
+//Merge two sorted arrays into one
+function mergeArrays(arr1, arr2) {
+  return arr1.concat(arr2).sort(function(a, b) {
+    return a-b;
+  }).filter(function(el, i, arr) {
+    return arr.indexOf(el) === i;
+  });
+}
+
+//Merge two sorted arrays into one v2
+function mergeArrays(arr1, arr2) {
+  return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
+}
