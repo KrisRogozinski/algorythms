@@ -59,3 +59,35 @@ function getMiddle(s){
 function solution(str){
   return str.split('').reverse().join('');
 }
+
+//Basic Calculator
+function calculate(num1, operation, num2) {
+  var result = null;
+
+  switch(operation){
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      if (result == -0)
+        result = Math.abs(result);
+      break;
+    case "/":
+      if (num2!=0)
+        result = num1 / num2;
+      break;
+    default:
+      return null;
+
+  }
+  return result;
+
+}
+//Basic Calculator v2
+function calculate(num1, operation, num2) {
+  return '+-*/'.indexOf(operation) > -1 ? eval(num1 + operation + num2) : null
+}

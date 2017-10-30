@@ -82,3 +82,13 @@ function mergeArrays(arr1, arr2) {
 function noSpace(x){
   return x.replace(/\s/gi, '');
 }
+
+//Counting sheep...
+function countSheeps(arrayOfSheep) {
+ return arrayOfSheep.filter((a)=> a==true).length;
+}
+
+//Convert a Number to a String!
+function numberToString(num) {
+  return num.toString();
+}
