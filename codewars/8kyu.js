@@ -92,3 +92,8 @@ function countSheeps(arrayOfSheep) {
 function numberToString(num) {
   return num.toString();
 }
+
+//Sum Arrays
+function sum(numbers) {
+    return numbers.reduce((a,b)=>a+b,0);
+};

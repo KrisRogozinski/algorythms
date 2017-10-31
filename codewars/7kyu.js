@@ -91,3 +91,12 @@ function calculate(num1, operation, num2) {
 function calculate(num1, operation, num2) {
   return '+-*/'.indexOf(operation) > -1 ? eval(num1 + operation + num2) : null
 }
+
+//Sum of Array Averages
+const sumAverage = (arr) => {
+  let result = 0;
+  for (let i=0;i<arr.length;i++){
+    result = result + (arr[i].reduce((a,b) => a+b,0))/arr[i].length;
+  }
+  return Math.floor(result);
+}
