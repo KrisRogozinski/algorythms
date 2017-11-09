@@ -29,3 +29,12 @@ function longestConsec(strarr, k) {
   }
   return rslt;
 }
+
+//Sum Array with different bases
+function sumItUp(a) {
+  let res = 0;
+  for(let i=0;i<a.length;i++){
+    res += parseInt(a[i][0],a[i][1]);
+  }
+  return parseInt(res,10);
+}
